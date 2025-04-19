@@ -14,6 +14,8 @@ function App() {
         <Route path="/reports" component={Reports} />
         <Route path="/userprofile" component={UserProfile} />
         <Route path="/reportissue" component={ReportIssue} />
+        <Route path="/myreport" component={MyReport} />
+        <Route path="/submitreport" component={SubmitReport} />
       </BrowserRouter> */}
     </div>
   );

@@ -1,15 +1,20 @@
 // import Header from './Components/Header/Header.jsx'
 // import Footer from './Components/Footer/Footer.jsx'
 import React from "react";
+import UserProfile from './Pages/UserProfile/UserProfile.jsx'
 // import { BrowserRouter } from "react-router-dom";
 
 import "./App.css";
+import { BrowserRouter, Route } from "react-router-dom";
 
 function App() {
   return (
     <div>
       {/* <Header /> */}
-      {/* <BrowserRouter>
+      {<UserProfile/>}
+
+     
+    {/* <BrowserRouter>
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={SignUp} />

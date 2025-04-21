@@ -1,6 +1,4 @@
 import React from "react";
-// import { useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaflet";
 import SubmitReport from "./Pages/SubmitReport/SubmitReport.jsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";

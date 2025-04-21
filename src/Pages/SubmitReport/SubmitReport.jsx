@@ -3,6 +3,7 @@ import React from "react"
 import MapComponent from "../../Components/Map/MapComponent"
 import "./SubmitReport.css"
 import 'leaflet/dist/leaflet.css';
+import ReportCat from "./ReportCat";
 
 const SubmitReport = () => {
     return (
@@ -37,6 +38,7 @@ const SubmitReport = () => {
   
         <h3>Select a location</h3>
         <MapComponent />
+        <ReportCat/>
       </div>
     );
   };

@@ -13,13 +13,21 @@ const redIcon = new L.Icon({
 
 const DraggableMarker = ({ position, setPosition }) => {
   const [draggable, setDraggable] = useState(true);
+  useMapEvents({
+    click(e) {
+      setPosition(e.latlng);
+    },
+  });
   return (
     <Marker
       draggable={draggable}
       eventHandlers={{
         dragend: (e) => {
           setPosition(e.target.getLatLng());
-        }
+        },
+        click: () => {
+          setDraggable((prev) => !prev); 
+        },
       }}
       position={position}
       icon={redIcon}

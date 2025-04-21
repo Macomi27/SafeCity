@@ -14,7 +14,7 @@ const Header = () => {
                 <li className="contact"><a href="#contact">Contact Us</a></li>
             </ul>
             <div className="nav-btns">
-                <button className="btn-login">Login</button>
+                <button className="btn-login" onClick={window.location.href = '/login'}>Login</button>
                 <button className="btn-signup" onClick={() => window.location.href = '/signup'}>Sign Up</button>
             </div>
         </div>

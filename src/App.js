@@ -1,25 +1,21 @@
-// import Header from './Components/Header/Header.jsx'
-// import Footer from './Components/Footer/Footer.jsx'
+import Header from "./Components/Header/Header.jsx";
 import React from "react";
-// import { BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import Signup from "./Components/Signup/Signup.jsx";
+import Login from "./Components/Login/Login.jsx";
 
 import "./App.css";
 
 function App() {
   return (
     <div>
-      {/* <Header /> */}
-      {/* <BrowserRouter>
-        <Route exact path="/" component={Home} />
-        <Route path="/login" component={Login} />
-        <Route path="/signup" component={SignUp} />
-        <Route exact path="/dashboard" component={Dashboard} />
-        <Route path="/userprofile" component={UserProfile} />
-        <Route path="/reportissue" component={ReportIssue} />
-        <Route path="/myreport" component={MyReport} />
-        <Route path="/submitreport" component={SubmitReport} />
-      </BrowserRouter> */}
-      {/* <Footer/> */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Header />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

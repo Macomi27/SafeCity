@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.report-heading{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 30px;
+    /* color: #333; */
+    text-align: left;
+}
+.report-heading h2{
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.info-section{
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    list-style-type:none;
+}
+.info-card{
+    background-color: #fff;
+    padding-block: 20px;
+    padding-inline: 30px;
+    color: #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    line-height: 25px;
+}
+.info-card li{
+    list-style: none;
+}
+
+.info-card h3{
+    font-size: 20px;
+    margin-bottom: 13px;
+}

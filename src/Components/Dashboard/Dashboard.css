@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&family=Poppins&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+   
+
+}
+.dashboard{
+    padding:20px;
+    background-color: #F5F5F5;
+}
+.dash-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dash-head .welcome p:nth-of-type(1){
+    font-family: 'poppins';
+    font-weight: 700;
+    font-size:18px;
+    color:#1E1E1E;
+}
+.dash-head .welcome p:nth-last-child(1){
+    font-family: 'poppins';
+    font-weight: 500;
+    font-size:14px;
+    color:#757575;
+}
+.report-btns{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+.dash-head .report-btns button:nth-of-type(1){
+    /* width: 144px;
+    height: 38px; */
+    border-radius: 5px;
+    padding: 6px 10px;
+    background-color:#FF6F00 ;
+    border:none;
+    color:#FFFFFF;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size:16px;
+}
+.dash-head .report-btns  i{
+    font-size: 20px;
+}
+.dash-head .report-btns button:nth-of-type(2){
+    width: 148px;
+    height: 38px;
+    border-radius:5px;
+    padding:  6px 10px 6px 10px;
+    background-color: #FFFFFF;
+    border:1px solid #FF6F00;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size:16px;
+    text-align: center;
+    color:#FF6F00;
+
+}
+.reports-status{
+    display: flex;
+    gap:12px;
+}
+.total-reports,.pending-reports,.resolved-reports,.reports-location{
+    width: 270px;
+    height: 125px;
+    border-radius: 10px;
+    border-width: 1px;
+    padding: 10px; 
+    background: #FFFFFF;
+    border: 1px solid #E7F7F0;
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+}
+.report-doc{
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+}
+.report-doc i{
+  font-size: 20px;
+  font-weight: bold;
+  color:#006837;
+  width: 28px;
+height: 28px;
+border-radius: 3px;
+border-width: 1px;
+background: #E7F7F0E7;
+border: 1px solid #E7F7F0;
+text-align: center;
+}
+.report-doc p{
+font-family: 'Poppins';
+font-weight: 500;
+font-size: 14px;
+color:  #1E1E1E;
+}
+.total-report-number{
+    display: flex;
+    gap:51px;
+}
+.total-report-number > p{
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 24px;
+    color:#1E1E1E;   
+}
+.reports-month{
+    display: flex;
+    gap:6px;
+    align-items: center;
+}
+.percentage{
+    display: flex;
+    gap:2px;
+}
+.percentage > p{
+  
+font-family: 'Poppins';
+font-weight: 500;
+font-size: 14px;
+color: #006837;
+padding: 0;
+}
+.percentage  i{
+    font-size: 16px;
+    color: #006837;
+}
+.reports-month > p{
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 12px;
+    color:#585858;
+    
+}
+.report-history{
+border-radius: 10px;
+padding-right: 18px;
+padding-left: 18px;
+gap: 26px;
+border-width: 1px;
+top: 1079px;
+left: 271px;
+background: #FFFFFF;
+border: 1px solid #DFDDDD;
+}
+.history-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title p{
+    font-family: 'Poppins';
+font-weight: 600;
+font-size: 16px;
+color:  #1E1E1E;
+
+}
+.view-all{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:9px;
+}
+.view-all p{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins';
+font-weight: 500;
+font-size: 14px;
+color: #636363;
+}
+.view-all i{
+    font-size: 17px;
+    color:#636363;
+}
+.table {
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  .table th,
+  .table td {
+    text-align: left;
+    height: 60px;
+    vertical-align: middle;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-weight: 500;
+    color: #1E1E1E;
+  }
+  
+  .table thead th {
+    color: #757575;
+  }
+  
+  .table-status {
+    display: flex;
+  align-items: center;
+  width: 93px;
+  height: 20px;
+  border-radius: 20px;
+  }
+  
+  .table-status.resolved {
+    background-color: #CAFFE6;
+  }
+  
+  .table-status.resolved i {
+    color: #219653;
+    font-size: 30px;
+  }
+  
+  .table-status.pending {
+    background-color: #FFE3E3;
+  }
+  .table-status.pending p,.table-status.resolved p{
+    font-family: 'poppins';
+font-weight: 500;
+font-size: 12px;
+margin: 0;
+padding: 0;
+  }
+  .table-status.pending i {
+    color: #D32F2F;
+    font-size: 30px;
+  }
+  

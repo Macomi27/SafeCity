@@ -1,20 +1,31 @@
 
 import React from "react"
 import MapComponent from "../../Components/Map/MapComponent"
-import "./SubmitReport.css"
+import "./SubmitReport.css";
+import TopBar from "./TopBar";
 import 'leaflet/dist/leaflet.css';
 import ReportCat from "./ReportCat";
+import logo from "../../Assets/images/Icon.png";
 
 const SubmitReport = () => {
     return (
         <div className="report-page">
+            <TopBar/>
             <div className="report-heading">
-                <h2>Make a Report</h2>
-                <p className="subtext">You're about to make your first report!</p>
+                <div className="make-report">
+                    <h2>Make a Report</h2>
+                    <p className="subtext">You're about to make your first report!</p>
+                </div>
+                <div className="view-report">
+                    <p className="view-report-p">View All Reports</p>
+                </div>
             </div>
             <div className="info-section">
                 <div className="info-card">
-                    <h3>Reporting Guidelines</h3>
+                    <div className="report-icon-container">
+                        <img src={logo} alt="report icon" className="report-icon" />
+                        <h3>Reporting Guidelines</h3>
+                    </div>
                     <ul>
                         <li>Be specific about the location</li>
                         <li>Include clear photos when possible</li>
@@ -36,8 +47,6 @@ const SubmitReport = () => {
                     </ul>
                 </div>
             </div>
-  
-            <h3>Select a location</h3>
             <MapComponent />
             <ReportCat/>
         </div>

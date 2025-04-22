@@ -42,6 +42,7 @@ const MapComponent = () => {
 
   return (
     <div className="map-container">
+      <h3 className="select-location">Select a location</h3>
       <input 
         type="text" 
         placeholder="Search for a location or drag the pin on the map" 

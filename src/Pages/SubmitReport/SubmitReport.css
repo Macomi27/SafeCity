@@ -1,9 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* TOP BAR */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 8px;
+    padding-inline: 20px 50px;
+    background: #fff;
+    box-shadow: 0 2px 4px #F5F7FB;
+  }
+  
+  .search-container {
+    position: relative;
+    width: 400px;
+  }
+  
+  .search-input {
+    background-color:#F5F7FB;
+    width: 100%;
+    padding: 8px 12px 8px 40px;
+    border: none;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    font-size: 15px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+  }
+  
+  .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  
+  .topbar-icons {
+    display: flex;
+    gap: 24px;
+    font-size: 16px;
+    color: #444;
+    position: relative;
+  }
+  .topbar-icons .medal-p{
+    font-family: poppins;
+    font-size: 10px;
+    background-color: #0a8f44;
+  }
+  .notification-icon {
+    position: relative;
+  }
+  
+  .notification-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6.5px;
+    font-size: 10px;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .profile-circle {
+    background: #0a8f44;
+    color: white;
+    font-weight: bold;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    line-height: 1;
+  }
+  
+  .name {
+    font-weight: 600;
+  }
+  
+  .role {
+    color: #888;
+  }
+
+/* report section */
 .report-heading{
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
     margin-left: 20px;
     padding-left: 30px;
@@ -11,16 +120,35 @@
     text-align: left;
 }
 .report-heading h2{
-    font-size: 27px;
+    font-size: 25px;
     font-weight: 700;
     margin-bottom: 15px;
+}
+.report-heading .view-report{
+    background-color:#fff;
+    padding: 6px 16px;
+    color: #FF6F00;
+    font-size: 16px;
+    margin: 10px 40px;
+    border-radius: 5px;
+    border: 1px solid #FF6F00;
+    align-self: center;
+}
+.report-icon-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.report-icon{
+    width: 20px;
+    height: 20px;
 }
 
 .info-section{
     display: flex;
-    gap: 30px;
+    gap: 35px;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 40px;
     margin-right: 20px;
     list-style-type:none;
 }
@@ -36,9 +164,42 @@
 }
 .info-card li{
     list-style: none;
+    font-size: 13px;
 }
 
 .info-card h3{
-    font-size: 20px;
+    font-size: 17px;
     margin-bottom: 13px;
 }
+.info-card .highlight{
+    font-weight: 600;
+    width: 376px;
+    padding: 10px;
+    font-size: 15px;
+    background-color:#f1e4d9b0;
+    color: #343434;
+    border-left: 2px solid #FF6F00;
+}
+
+
+  
+  @media screen and (max-width: 768px){
+    .info-card{
+        margin-inline: 0 auto;
+        width: 300px;
+    }
+    .info-section{
+        flex-direction: column;
+    }
+    .info-card li{
+        font-size: 11px;
+    }
+    
+    .info-card h3{
+        font-size: 12px;
+    }
+    .info-card .highlight{
+        width: 276px;
+        font-size: 11px;
+    }  
+  }

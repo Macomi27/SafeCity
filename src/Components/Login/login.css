@@ -17,7 +17,7 @@
     top: -5%;
     right: -8%;
     z-index: -1;
-    transform: skew(-30deg);
+    transform: skew(-30deg) rotate(10deg);
 }
 
 .circle-design{
@@ -186,15 +186,32 @@
     padding-left: 70px;
 }
 
-.input-icon {  
+.form-input input:focus{
+    outline: none;
+}
+
+.form-input .input-icon {  
+    width: 30px;
+    left: 20px;
     position: absolute;  
     top: 50%;  
+    opacity: .5;
     transform: translateY(-50%);  
-    width: 80px;      
 }  
- .visibility{
+ .visibility-off{
     position: absolute;  
     top: 50%;  
+    cursor: pointer;
+    opacity: .5;
+    transform: translateY(-50%);  
+    right: 20px;  
+    width: 30px;
+}
+.visibility{
+    position: absolute;  
+    top: 50%;  
+    cursor: pointer;
+    opacity: .5;
     transform: translateY(-50%);  
     right: 20px;  
     width: 30px;

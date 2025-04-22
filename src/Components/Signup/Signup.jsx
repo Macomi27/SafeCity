@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef, useState} from "react";
 import "./Signup.css"
 import signupLogo from './image/LogoSignup.png'
 import fbLogo from './image/fbLogo.png'
@@ -7,8 +7,70 @@ import userIcon from './image/user.png'
 import passwordIcon from './image/password.png'
 import emailIcon from './image/email.png'
 import visibilityIcon from './image/visibility.png'
+import visibilityOffIcon from './image/visibility-off.png'
 
 const Signup = () => {
+
+    const usernameRef = useRef(null); // Create a ref for the username input  
+    
+    const handleSideSignUpClick = () => {  
+        if (usernameRef.current) {  
+            usernameRef.current.classList.add('highlight'); // Add highlight class  
+            usernameRef.current.focus(); // Focus the username input  
+        }  
+    };  
+
+    const [username, setUsername] = useState('');  
+    const [email, setEmail] = useState('');  
+    const [password, setPassword] = useState('');  
+    const [confirmPassword, setConfirmPassword] = useState(''); 
+    const [errors, setErrors] = useState({}); // Object to hold error messages  
+    const [successMessage, setSuccessMessage] = useState(''); 
+
+    const validateEmail = (email) => {  
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email validation regex  
+        return regex.test(email);  
+    };
+
+        const [showPassword, setShowPassword] = useState(false); // State to manage password visibility  
+    
+        const togglePasswordVisibility = () => {  
+            setShowPassword((prev) => !prev); // Toggle password visibility  
+        }; 
+
+        const [showConfirmPassword, setShowConfirmPassword] = useState(false); // State to manage password visibility  
+    
+        const toggleConfirmPasswordVisibility = () => {  
+            setShowConfirmPassword((prev) => !prev); // Toggle password visibility  
+        }; 
+
+        const validateForm = () => {  
+            const errors = {};  
+            if (!username) errors.username = 'Username is required.';  
+            if (!email) errors.email = 'Email is required.';  
+            else if (!validateEmail(email)) errors.email = 'Email is not valid.';  
+            if (!password) errors.password = 'Password is required.';  
+            else if (password.length < 6) errors.password = 'Password must be at least 6 characters.';  
+            if (!confirmPassword) errors.confirmPassword = 'Please confirm your password.';  
+            else if (password !== confirmPassword) errors.confirmPassword = 'Passwords do not match.';  
+    
+            setErrors(errors); // Update errors state  
+            return Object.keys(errors).length === 0; // Return true if no errors  
+        }; 
+
+        const handleSubmit = (e) => {  
+            e.preventDefault(); // Prevent the default form submission  
+            setErrors({}); // Clear previous errors  
+            setSuccessMessage(''); // Clear any previous success messages  
+    
+            if (validateForm()) {  
+                // If the form is valid  
+                setSuccessMessage('Signup successful!'); // Update success message  
+                // Here, you would typically handle the signup (e.g., API call)  
+                console.log('Form submitted:', { username, email, password });  
+            }   
+        }; 
+
     return(
         <div className="signup-page">
         <div className="circle-design"></div>
@@ -27,7 +89,7 @@ const Signup = () => {
                         
                         <p className="left-signup-summ">SafeCity lets you quickly report problems like potholes or broken streetlights—right when you spot them</p>
                     </div>
-                    <div className="left-signup-btn"><button>sign up</button></div>
+                    <div className="left-signup-btn"><button type="button" onClick={handleSideSignUpClick}>sign up</button></div>
                 </div>
             </div>
 
@@ -35,26 +97,43 @@ const Signup = () => {
                 <div className="right-signup-form">
                     <div className="signup-options">
                         <div className="signup-option1">
-                            <form action="" id="signup-form" className="signup-form">
+                            <form method="POST" onSubmit={handleSubmit} id="signup-form" className="signup-form">
                                 <div className="signup-form-header">
                                     <h1>create account</h1>
                                 </div>
                                 <div className="form-input">
                                     <img className="input-icon" src={userIcon} alt="user icon" />
-                                    <input type="text" name="username" id="username" placeholder="Name" required/></div>
+                                    <input type="text" name="username" id="username" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Name" ref={usernameRef} required/>
+                                    {errors.username && <p className="error">{errors.username}</p>} 
+                                    </div>
                                 <div className="form-input">
+                                    
                                     <img className="input-icon" src={emailIcon} alt="" />
-                                    <input type="text" name="username" id="username" placeholder="Email/Phone Number" required/></div>
-                                <div className="form-input">
+                                    <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email/Phone Number" required/>
+                                    {errors.email && <p className="error">{errors.email}</p>} 
+                                    </div>
+                                <div className="form-input" onClick={togglePasswordVisibility}>
                                     <img className="input-icon" src={passwordIcon} alt="" />
-                                    <img className="input-icon visibility" src={visibilityIcon} alt="" />
-                                    <input type="text" name="username" id="username" placeholder="Create Password" required/></div>
-                                <div className="form-input">
+                                    {showPassword ? 
+                                <img className="visibility-off" src={visibilityOffIcon} alt="" />: 
+                                <img className="visibility" src={visibilityIcon} alt="" />
+                                }
+                                    <input type={showPassword ? 'password' : 'text'} name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}  placeholder="Create Password" required/>
+                                    {errors.password && <p className="error">{errors.password}</p>} 
+                                    </div>
+                                <div className="form-input" onClick={toggleConfirmPasswordVisibility}>
                                 <img className="input-icon" src={passwordIcon} alt="" />
-                                <img className="input-icon visibility" src={visibilityIcon} alt="" />
-                                    <input type="text" name="username" id="username" placeholder="Confirm Password" required/></div>
+                                {showConfirmPassword ? 
+                                <img className="visibility-off" src={visibilityOffIcon} alt="" />: 
+                                <img className="visibility" src={visibilityIcon} alt="" />
+                                }
+                                
+                                    <input type={showConfirmPassword ? 'password' : 'text'} name="confirmPassword" id="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}  placeholder="Confirm Password" required/>
+                                    {errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>} 
+                                    </div>
                             </form>
-                            <div className="right-signup-btn"><button>sign up</button></div>
+                            <div className="right-signup-btn"><button type="submit" onClick={validateForm}>sign up</button>
+                            {successMessage && <p className="signin-successful">{successMessage}</p>}  </div>
                         </div>
                         <div className="signup-option2">
                             <p>or Sign Up with</p>

@@ -1,8 +1,8 @@
 import Header from "./Components/Header/Header.jsx";
 import React from "react";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
-import Signup from "./Components/Signup/Signup.jsx";
-import Login from "./Components/Login/Login.jsx";
+import SignupPage from "./Pages/SignUp.jsx";
+import LoginPage from "./Pages/Login.jsx";
 
 import "./App.css";
 
@@ -12,8 +12,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Header />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </Router>
     </div>

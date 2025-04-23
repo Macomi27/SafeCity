@@ -258,24 +258,29 @@ overflow: hidden;
     left:35%;
     bottom:20%;
  }
- @media (max-width: 575.98px) {
+ @media (max-width: 768px) {
     #user-profile h1 {
-      font-size: 24px;
+      font-size: 28px;
       width: 90%;
-      margin-left: 5%;
+      margin-left: auto;
+      margin-right: auto;
+      top: 10px;
     }
   
     #user {
       width: 95%;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 40px auto;
+      padding: 10px;
+      height: auto;
     }
   
     .navbar {
       flex-direction: column;
-      gap: 10px;
+      align-items: flex-start;
       width: 100%;
+      gap: 20px;
       height: auto;
+      padding: 10px;
     }
   
     #search {
@@ -284,10 +289,32 @@ overflow: hidden;
       top: 0;
     }
   
+    .navbar p,
+    .navbar .badges img,
+    .navbar .bell img,
+    .navbar h3,
+    .navbar .prof {
+      position: static;
+      margin-top: 5px;
+    }
+  
     .sidebar-container {
       width: 100%;
       height: auto;
       position: static;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+  
+    .sidebar-container .sidebar-text {
+      position: static;
+      display: block;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+  
+    .sidebar-content {
+      margin-top: 10%;
     }
   
     .profile-header {
@@ -296,79 +323,44 @@ overflow: hidden;
       top: auto;
       position: static;
       height: auto;
+      padding: 10px;
+    }
+  
+    .profile-header-icons {
+      flex-wrap: wrap;
+      gap: 10px;
+      width: 100%;
+      height: auto;
     }
   
     #user-form {
       flex-direction: column;
+      width: 100%;
       gap: 20px;
+      padding: 10px;
       height: auto;
+    }
+  
+    #user-form-left input,
+    select,
+    #citizen,
+    .user-form-right input {
+      width: 100%;
     }
   
     .button {
       width: 100%;
       left: 0;
       bottom: 0;
-    }
-  }
-  @media (min-width: 576px) and (max-width: 767.98px) {
-    #user-profile h1 {
-      font-size: 28px;
-      width: 90%;
-      margin-left: 5%;
+      margin-top: 20px;
     }
   
-    #user {
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  
-    .navbar {
-      flex-wrap: wrap;
-      gap: 20px;
-      width: 100%;
-    }
-  
-    .profile-header {
-      width: 100%;
-      left: 0;
-    }
-  
-    #user-form {
-      flex-direction: column;
-      gap: 20px;
-      height: auto;
+    .tet {
+      left: auto;
+      right: auto;
+      top: 0;
+      position: relative;
+      margin: 10px auto;
     }
   }
   
-  @media (min-width: 768px) and (max-width: 991.98px) {
-    #user-profile h1 {
-      font-size: 32px;
-      width: 80%;
-      margin-left: 10%;
-    }
-  
-    #user {
-      width: 80%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  
-    .sidebar-container {
-      width: 25%;
-    }
-  
-    .profile-header {
-      width: 70%;
-      left: 25%;
-    }
-  
-    #user-form {
-      gap: 5%;
-    }
-  
-    .button {
-      left: 20%;
-    }
-  }
-        

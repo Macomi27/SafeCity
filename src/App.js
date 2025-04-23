@@ -1,8 +1,9 @@
-// import Header from './Components/Header/Header.jsx'
-// import Footer from './Components/Footer/Footer.jsx'
+import Header from "./Components/Header/Header.jsx";
 import React from "react";
 import UserProfile from './Pages/UserProfile/UserProfile.jsx'
-// import { BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import SignupPage from "./Pages/SignUp.jsx";
+import LoginPage from "./Pages/Login.jsx";
 
 import "./App.css";
 import { BrowserRouter, Route } from "react-router-dom";
@@ -10,21 +11,14 @@ import { BrowserRouter, Route } from "react-router-dom";
 function App() {
   return (
     <div>
-      {/* <Header /> */}
-      {<UserProfile/>}
-
-     
-    {/* <BrowserRouter>
-        <Route exact path="/" component={Home} />
-        <Route path="/login" component={Login} />
-        <Route path="/signup" component={SignUp} />
-        <Route exact path="/dashboard" component={Dashboard} />
-        <Route path="/userprofile" component={UserProfile} />
-        <Route path="/reportissue" component={ReportIssue} />
-        <Route path="/myreport" component={MyReport} />
-        <Route path="/submitreport" component={SubmitReport} />
-      </BrowserRouter> */}
-      {/* <Footer/> */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Header />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/userprofile" element={<UserProfile />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

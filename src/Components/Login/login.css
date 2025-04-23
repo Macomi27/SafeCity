@@ -17,7 +17,7 @@
     top: -5%;
     right: -8%;
     z-index: -1;
-    transform: skew(-30deg);
+    transform: skew(-30deg) rotate(10deg);
 }
 
 .circle-design{
@@ -80,7 +80,7 @@
 .login-intro-text-heading{
     font-weight: 800;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 32px;
     margin-bottom: 15px;
     color: #F6F1ED;
 }
@@ -90,7 +90,7 @@
     margin-inline: auto;
     font-weight: 600;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 28px;
     color: #F6F1ED;
     text-transform: capitalize;
 }
@@ -98,23 +98,7 @@
 .left-login-summ{
     font-weight: 400;
     font-size: 16px;
-    line-height: 22px;
-}
-
-.left-login-btn button{
-    width: 180px;
-    padding: 12px 15px;
-    border-radius: 10px;
-    border-width: 2px;
-    border: 2px solid #034E03;
-    background-color: #F6F1ED;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 100%;
-    cursor: pointer;
-    color: #006837;
-    text-transform: capitalize;
-    font-family: Inter;
+    line-height: 26px;
 }
 
 .right-login{
@@ -186,15 +170,32 @@
     padding-left: 70px;
 }
 
-.input-icon {  
+.form-input input:focus{
+    outline: none;
+}
+
+.form-input .input-icon {  
+    width: 30px;
+    left: 20px;
     position: absolute;  
     top: 50%;  
+    opacity: .5;
     transform: translateY(-50%);  
-    width: 80px;      
 }  
- .visibility{
+ .visibility-off{
     position: absolute;  
     top: 50%;  
+    cursor: pointer;
+    opacity: .5;
+    transform: translateY(-50%);  
+    right: 20px;  
+    width: 30px;
+}
+.visibility{
+    position: absolute;  
+    top: 50%;  
+    cursor: pointer;
+    opacity: .5;
     transform: translateY(-50%);  
     right: 20px;  
     width: 30px;
@@ -269,4 +270,50 @@
     font-size: 16px;
     line-height: 100%;
     color: #004D00;
+}
+
+@media (max-width:767px) {
+
+    .login-page .rect-design{
+        background-color: #FF6F00;
+        right: -25%;
+    }
+
+    .login-page .circle-design{
+        background-color: #004D00;
+    }
+
+    .login-container{
+        width: 85%;
+        flex-direction: column;
+    }
+
+    .left-login, .right-login{
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .login-intro{
+        width: 80%;
+        gap: 30px;
+    }
+
+    .login-intro-text-heading{
+        font-size: 18px;
+    }
+    
+    .login-slogan{
+        font-size: 16px;
+    }
+    .left-login-summ{
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .right-login-form{
+        width: 90%;
+    }
+    .login-form-header{
+        font-size: 20px;
+    }
 }

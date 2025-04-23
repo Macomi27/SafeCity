@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState} from "react";
 import "./login.css"
 import loginLogo from '../Signup/image/LogoSignup.png'
 import fbLogo from '../Signup/image/fbLogo.png'
@@ -6,8 +6,17 @@ import googleLogo from '../Signup/image/googleLogo.png'
 import passwordIcon from '../Signup/image/password.png'
 import emailIcon from '../Signup/image/email.png'
 import visibilityIcon from '../Signup/image/visibility.png'
+import visibilityOffIcon from '../Signup/image/visibility-off.png'
 
 const Login = () => {
+  
+
+        const [showPassword, setShowPassword] = useState(false); // State to manage password visibility  
+            
+                const togglePasswordVisibility = () => {  
+                    setShowPassword((prev) => !prev); // Toggle password visibility  
+                }; 
+
     return(
         <div className="login-page">
         <div className="circle-design"></div>
@@ -26,7 +35,7 @@ const Login = () => {
                         
                         <p className="left-login-summ">SafeCity lets you quickly report problems like potholes or broken streetlights—right when you spot them</p>
                     </div>
-                    <div className="left-login-btn"><button>sign in</button></div>
+                    
                 </div>
             </div>
 
@@ -40,11 +49,14 @@ const Login = () => {
                                 </div>
                                 <div className="form-input">
                                     <img className="input-icon" src={emailIcon} alt="" />
-                                    <input type="text" name="username" id="username" placeholder="Email/Phone Number" required/></div>
-                                <div className="form-input">
+                                    <input type="email" name="email" id="email" placeholder="Email/Phone Number"  required/></div>
+                                <div className="form-input" onClick={togglePasswordVisibility}>
                                     <img className="input-icon" src={passwordIcon} alt="" />
-                                    <img className="input-icon visibility" src={visibilityIcon} alt="" />
-                                    <input type="text" name="username" id="username" placeholder="Create Password" required/></div>
+                                    {showPassword ? 
+                                <img className="visibility-off" src={visibilityOffIcon} alt="" />: 
+                                <img className="visibility" src={visibilityIcon} alt="" />
+                                }
+                                    <input type="password" name="password" id="password" placeholder="Password" required/></div>
                                 
                             </form>
                             <div className="right-login-btn"><button>Login</button></div>

@@ -1,4 +1,5 @@
-import React, {useRef, useState} from "react";
+import React, {useState} from "react";
+import {useNavigate } from "react-router-dom";
 import "./Signup.css"
 import signupLogo from './image/LogoSignup.png'
 import fbLogo from './image/fbLogo.png'
@@ -11,15 +12,8 @@ import visibilityOffIcon from './image/visibility-off.png'
 
 const Signup = () => {
 
-    const usernameRef = useRef(null); // Create a ref for the username input  
-    
-    const handleSideSignUpClick = () => {  
-        if (usernameRef.current) {  
-            usernameRef.current.classList.add('highlight'); // Add highlight class  
-            usernameRef.current.focus(); // Focus the username input  
-        }  
-    };  
-
+     
+    const navigate = useNavigate(); // Initialize useNavigate  
     const [username, setUsername] = useState('');  
     const [email, setEmail] = useState('');  
     const [password, setPassword] = useState('');  
@@ -67,7 +61,8 @@ const Signup = () => {
                 // If the form is valid  
                 setSuccessMessage('Signup successful!'); // Update success message  
                 // Here, you would typically handle the signup (e.g., API call)  
-                console.log('Form submitted:', { username, email, password });  
+                console.log('Form submitted:', { username, email, password }); 
+                navigate('/login'); // Redirect to the login page after successful signup
             }   
         }; 
 
@@ -89,7 +84,7 @@ const Signup = () => {
                         
                         <p className="left-signup-summ">SafeCity lets you quickly report problems like potholes or broken streetlights—right when you spot them</p>
                     </div>
-                    <div className="left-signup-btn"><button type="button" onClick={handleSideSignUpClick}>sign up</button></div>
+                   
                 </div>
             </div>
 
@@ -103,7 +98,7 @@ const Signup = () => {
                                 </div>
                                 <div className="form-input">
                                     <img className="input-icon" src={userIcon} alt="user icon" />
-                                    <input type="text" name="username" id="username" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Name" ref={usernameRef} required/>
+                                    <input type="text" name="username" id="username" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Name" required/>
                                     {errors.username && <p className="error">{errors.username}</p>} 
                                     </div>
                                 <div className="form-input">
@@ -133,7 +128,7 @@ const Signup = () => {
                                     </div>
                             </form>
                             <div className="right-signup-btn"><button type="submit" onClick={validateForm}>sign up</button>
-                            {successMessage && <p className="signin-successful">{successMessage}</p>}  </div>
+                            {successMessage && <p className="signup-successful">{successMessage}</p>}  </div>
                         </div>
                         <div className="signup-option2">
                             <p>or Sign Up with</p>

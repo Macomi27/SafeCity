@@ -57,9 +57,9 @@ const Login = () => {
                                 <img className="visibility" src={visibilityIcon} alt="" />
                                 }
                                     <input type="password" name="password" id="password" placeholder="Password" required/></div>
-                                
+                                <div className="right-login-btn"><button>Login</button></div>
                             </form>
-                            <div className="right-login-btn"><button>Login</button></div>
+                            
                         </div>
                           <div className="forgot-password"><a href="/">forgot password?</a></div>  
                         <div className="login-option2">

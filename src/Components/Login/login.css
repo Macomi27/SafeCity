@@ -203,6 +203,7 @@
 
 .right-login-btn{
     width: 70%;
+    margin-inline: auto;
 }
 .right-login-btn button{
     font-family: Poppins;
@@ -216,7 +217,6 @@
     line-height: 100%;
     color: #ffffff;
     text-transform: capitalize;
-    margin-inline: auto;
     cursor: pointer;
 }
 

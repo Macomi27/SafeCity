@@ -16,7 +16,7 @@ const Header = () => {
     }
 
     return(
-    <nav>
+    <nav className="header-nav">
         <div className="navbar">
             <div className="home-logo"><img src={logoLarge} alt="" /></div>
             <ul className="nav-links">

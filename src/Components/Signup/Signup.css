@@ -10,15 +10,15 @@
     overflow: hidden;
 }
 
-.close-icon{
+.signup-page .sign-up-close{
     width: 24px;
     position: absolute;
     right: 10%;
-    top: 12%;
+    top: 16%;
     cursor: pointer;
 }
 
-.close-icon img{
+.signup-page .sign-up-close FaTimes{
     width: 100%;
     opacity: .5;
 }
@@ -292,13 +292,10 @@
 
 @media (max-width:767px) {
 
-    .signup-page .close-icon{
+    .signup-page .sign-up-close{
         right: 12%;
-        top: 8%;
-    }
-
-    .signup-page .close-icon img:hover{
-        background-color: #ffffff;
+        top: 10%;
+        color: #ffffff;
     }
 
     .signup-page .rect-design{

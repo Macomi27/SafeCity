@@ -9,7 +9,8 @@ import passwordIcon from './image/password.png'
 import emailIcon from './image/email.png'
 import visibilityIcon from './image/visibility.png'
 import visibilityOffIcon from './image/visibility-off.png'
-import closeIcon from './image/x.png'
+
+import { FaTimes } from 'react-icons/fa'; // Importing the close icon from react-icons
 
 const Signup = () => {
 
@@ -73,12 +74,8 @@ const Signup = () => {
 
     return(
         <div className="signup-page">
-        <div className="close-icon">
-        <img  
-                src={closeIcon} // Replace with the path to your close icon or you can use <FaTimes />  
-                alt="Close"  
-                onClick={handleCloseClick}  
-            />
+        <div className="sign-up-close">
+        <FaTimes />
         </div>
         <div className="circle-design"></div>
         <div className="rect-design"></div>

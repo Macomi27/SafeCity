@@ -2,12 +2,11 @@
  
 #user-profile{
     background-color: #8E8E8E;
-    height:190vh;
     width: 100%;
-   
     display: block;
     align-items: center;
     font-family: 'poppins';
+    box-sizing: border-box;
  }
  #user-profile h1{
     text-align: center;
@@ -15,19 +14,17 @@
     font-size: 40px;
     font-weight: 600;
     color: black;
-    margin-left: 270px;
-    margin-top: 30px;
+    margin-left: 250px;
+    border-radius: 20px;
+    position: relative;
+    top:30px;
     width:600px;
-    border-radius: 30px;
     background-color: white;
-    
-
-
  }
  #user{
     margin-top: 80px;
     background-color: #E3E3E3;
-    height:130vh;
+    height:125vh;
     width:70%;
     display: block;
     align-items: center;
@@ -42,7 +39,7 @@
     position: relative;
    right:1%;
    gap:40px;
-   height:7%;
+   height:10%;
 
  }
  #search{
@@ -51,26 +48,26 @@
     width:270px;
     background-color:#E3E3E3 ;
     position: relative;
-    left:150px;
-    top:10px;
-    font-size: 15px;
+    left:110px;
+    top:8px;
+    font-size: 17px;
  }
  .navbar p{
     font-family: 'poppins';
     position: relative;
-    left:173px;
+    left:135px;
     top:1px;
  }
  .navbar .badges img{
    width:20px;
    position: relative;
-   left:210px;
+   left:170px;
    top:19px;
  }
  .navbar .bell img{
     width:30px;
     position: relative;
-    left:146px;
+    left:108px;
     top:15px;
  }
  .navbar h3{
@@ -82,7 +79,7 @@
     color:white;
     background-color: #006837;
     position: relative;
-    left:110px;
+    left:70px;
     bottom:11px;
  }
  span{
@@ -94,7 +91,7 @@
  }
  .navbar .prof{
     position: relative;
-    left:72px;
+    left:35px;
     bottom:10px;
  }
  .sidebar-container{
@@ -103,7 +100,7 @@
     top:0.3%;
     background-color: white;
     width:20%;
-    height:70%;
+    height:73%;
     right:9px;
     padding:5px;
     
@@ -141,8 +138,14 @@ padding: 10px;
     margin-top: 40%;
     text-align: center;
  }
+ .sidebar-content img{
+    width:20px;
+    position: relative;
+    right:53px;
+    top:45px;
+ }
  .sidebar-content .safe{
-    margin-top:35%;
+    margin-top:20%;
     text-align: center;
 font-size: 12px;
     color:#E3E3E3;
@@ -154,16 +157,18 @@ font-size: 12px;
     width:54%;
     position: absolute;
     left:27%;
-    top:33%;
+    top:37%;
     padding-inline: 20px;
     
  }
  .profile-header h2{
     font-family: 'poppins';
+    font-size: 24px;
  }
  .profile-header p{
     position: relative;
     bottom:15px;
+    font-size: 14px;
  }
  .profile-header-icons{
     display: flex;
@@ -171,6 +176,8 @@ font-size: 12px;
     width: 98%;
     gap:10px;
     height:30%;
+    position: relative;
+    bottom:30px;
     
  }
  .profile-header-icons img{
@@ -207,7 +214,7 @@ overflow: hidden;
     padding-left: 20px;
     background-color: white;
     position: relative;
- bottom:0%;
+ bottom:8%;
  
     
  }
@@ -251,68 +258,117 @@ overflow: hidden;
     left:35%;
     bottom:20%;
  }
- 
- 
- 
- 
- 
- 
- 
- 
- 
- /* .profile-form{
-    text-align: center;
-    
-}
-.profile-form h1{
-    color:red;
-    font-size: 2rem;
-}
-.profile-form #username{
-    width:23%;
-    padding: 10px;
-    margin: 10px;
-    font-size: 17px;
-    border-radius: 5px;
-}
-.profile-form #phone-number{
-    width:23%;
-    padding: 10px;
-    margin: 10px;
-    font-size: 17px;
-    border-radius: 5px;
-}
-.profile-form #pass{
-    width:23%;
-    padding: 10px;
-    margin: 10px;
-    font-size: 17px;
-    border-radius: 5px;
-}
-.profile-form #word{
-    width:23%;
-    padding: 10px;
-    margin: 10px;
-    font-size: 17px;
-    border-radius:5px;
-}
-button{
-    width:25%;
-    padding: 10px;
-    margin: 10px;
-    font-size:20px;
-    border-radius: 5px;
-    background-color:#004D00;
-    color:white;
-}
-.social{
-    text-align: center;
-}
-.social-media-icons img{
-    width: 50px;
-}
-.social a{
-    text-decoration: none;
-    color:#004D00;
-margin-left: 5px;
-}  */
+ @media (max-width: 575.98px) {
+    #user-profile h1 {
+      font-size: 24px;
+      width: 90%;
+      margin-left: 5%;
+    }
+  
+    #user {
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      height: auto;
+    }
+  
+    #search {
+      width: 90%;
+      left: 0;
+      top: 0;
+    }
+  
+    .sidebar-container {
+      width: 100%;
+      height: auto;
+      position: static;
+    }
+  
+    .profile-header {
+      width: 100%;
+      left: 0;
+      top: auto;
+      position: static;
+      height: auto;
+    }
+  
+    #user-form {
+      flex-direction: column;
+      gap: 20px;
+      height: auto;
+    }
+  
+    .button {
+      width: 100%;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    #user-profile h1 {
+      font-size: 28px;
+      width: 90%;
+      margin-left: 5%;
+    }
+  
+    #user {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .navbar {
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 100%;
+    }
+  
+    .profile-header {
+      width: 100%;
+      left: 0;
+    }
+  
+    #user-form {
+      flex-direction: column;
+      gap: 20px;
+      height: auto;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    #user-profile h1 {
+      font-size: 32px;
+      width: 80%;
+      margin-left: 10%;
+    }
+  
+    #user {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .sidebar-container {
+      width: 25%;
+    }
+  
+    .profile-header {
+      width: 70%;
+      left: 25%;
+    }
+  
+    #user-form {
+      gap: 5%;
+    }
+  
+    .button {
+      left: 20%;
+    }
+  }
+        

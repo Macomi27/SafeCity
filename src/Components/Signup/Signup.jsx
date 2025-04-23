@@ -126,10 +126,10 @@ const Signup = () => {
                                     <input type={showConfirmPassword ? 'password' : 'text'} name="confirmPassword" id="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}  placeholder="Confirm Password" required/>
                                     {errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>} 
                                     </div>
-                                    <div className="right-signup-btn"><button type="submit" onClick={validateForm}>sign up</button>
-                            </div>{successMessage && <p className="signup-successful">{successMessage}</p>}  
+                                    <div className="right-signup-btn"><button type="submit" onClick={validateForm}>sign up</button></div>
                             </form>
                             
+                            {successMessage && <p className="signup-successful">{successMessage}</p>}  
                         </div>
                         <div className="signup-option2">
                             <p>or Sign Up with</p>

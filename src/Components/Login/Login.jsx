@@ -1,4 +1,5 @@
 import React, { useState} from "react";
+import { useNavigate } from "react-router-dom";
 import "./login.css"
 import loginLogo from '../Signup/image/LogoSignup.png'
 import fbLogo from '../Signup/image/fbLogo.png'
@@ -7,9 +8,10 @@ import passwordIcon from '../Signup/image/password.png'
 import emailIcon from '../Signup/image/email.png'
 import visibilityIcon from '../Signup/image/visibility.png'
 import visibilityOffIcon from '../Signup/image/visibility-off.png'
+import closeIcon from '../Signup/image/x.png'
 
 const Login = () => {
-  
+        const navigate = useNavigate(); // Initialize useNavigate
 
         const [showPassword, setShowPassword] = useState(false); // State to manage password visibility  
             
@@ -17,8 +19,19 @@ const Login = () => {
                     setShowPassword((prev) => !prev); // Toggle password visibility  
                 }; 
 
+                const handleCloseClick = () => {  
+                    navigate('/'); // Redirect to the home page when the close icon is clicked  
+                }; 
+
     return(
         <div className="login-page">
+            <div className="close-icon">
+                    <img  
+                            src={closeIcon} // Replace with the path to your close icon or you can use <FaTimes />  
+                            alt="Close"  
+                            onClick={handleCloseClick}  
+                        />
+                    </div>
         <div className="circle-design"></div>
         <div className="rect-design"></div>
         <div className="login-container">

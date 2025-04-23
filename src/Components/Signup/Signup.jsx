@@ -9,6 +9,7 @@ import passwordIcon from './image/password.png'
 import emailIcon from './image/email.png'
 import visibilityIcon from './image/visibility.png'
 import visibilityOffIcon from './image/visibility-off.png'
+import closeIcon from './image/x.png'
 
 const Signup = () => {
 
@@ -66,8 +67,19 @@ const Signup = () => {
             }   
         }; 
 
+        const handleCloseClick = () => {  
+            navigate('/'); // Redirect to the home page when the close icon is clicked  
+        };  
+
     return(
         <div className="signup-page">
+        <div className="close-icon">
+        <img  
+                src={closeIcon} // Replace with the path to your close icon or you can use <FaTimes />  
+                alt="Close"  
+                onClick={handleCloseClick}  
+            />
+        </div>
         <div className="circle-design"></div>
         <div className="rect-design"></div>
         <div className="signup-container">

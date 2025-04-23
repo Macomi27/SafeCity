@@ -9,15 +9,15 @@
     overflow: hidden;
 }
 
-.close-icon{
+.login-page .login-close{
     width: 24px;
     position: absolute;
     right: 10%;
-    top: 16%;
+    top: 20%;
     cursor: pointer;
 }
 
-.close-icon img{
+.login-page .login-close-icon FaTimes{
     width: 100%;
     opacity: .5;
 }
@@ -286,6 +286,12 @@
 }
 
 @media (max-width:767px) {
+
+    .login-page .login-close{
+        right: 12%;
+        top: 12%;
+        color: #ffffff;
+    }
 
     .login-page .rect-design{
         background-color: #FF6F00;

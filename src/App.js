@@ -1,28 +1,24 @@
-import React from "react";
+
 import SubmitReport from "./Pages/SubmitReport/SubmitReport.jsx";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header from "./Components/Header/Header.jsx";
+import React from "react";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import SignupPage from "./Pages/SignUp.jsx";
+import LoginPage from "./Pages/Login.jsx";
+
 import "./App.css";
-// import Header from './Components/Header/Header.jsx'
-// import Footer from './Components/Footer/Footer.jsx'
 
 function App() {
   return (
-    <div className="App">
-      {/* <Header /> */}
-      <SubmitReport />
-      <BrowserRouter>
+    <div>
+      <Router>
         <Routes>
-          {/* <Route exact path="/" component={Home} /> */}
-          {/* <Route path="/login" component={Login} /> */}
-          {/* <Route path="/signup" component={SignUp} /> */}
-          {/* <Route exact path="/dashboard" component={Dashboard} /> */}
-          {/* <Route path="/userprofile" component={UserProfile} /> */}
-          {/* <Route path="/reportissue" component={ReportIssue} /> */}
-          {/* <Route path="/myreport" component={MyReport} /> */}
-          <Route path="/submitreport" component={SubmitReport}/>
+          <Route path="/" element={<Header />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/submitreport" element={<SubmitReport>}/>
         </Routes>
-      </BrowserRouter>
-      {/* <Footer/> */}
+      </Router>
     </div>
   );
 }

@@ -1,12 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+
 .signup-page{
     width: 100%;
     background-color: #F6F1ED;
     position: relative;
     z-index: 1;
     overflow: hidden;
+}
+
+.close-icon{
+    width: 24px;
+    position: absolute;
+    right: 10%;
+    top: 12%;
+    cursor: pointer;
+}
+
+.close-icon img{
+    width: 100%;
+    opacity: .5;
 }
 
 .rect-design{
@@ -189,7 +203,7 @@
 }
 
 .form-input .input-icon {  
-    width: 30px;
+    width: 24px;
     left: 20px;
     position: absolute;  
     top: 50%;  
@@ -202,7 +216,7 @@
     opacity: .5;
     transform: translateY(-50%);  
     right: 20px;  
-    width: 30px;
+    width: 24px;
 }
 .visibility{
     position: absolute;  
@@ -277,6 +291,15 @@
 
 
 @media (max-width:767px) {
+
+    .signup-page .close-icon{
+        right: 12%;
+        top: 8%;
+    }
+
+    .signup-page .close-icon img:hover{
+        background-color: #ffffff;
+    }
 
     .signup-page .rect-design{
         background-color: #FF6F00;

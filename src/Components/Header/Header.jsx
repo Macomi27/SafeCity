@@ -1,8 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import logoLarge from './image/LogoLarge.png'
 import "./Header.css"
 
 const Header = () => {
+
+    const navigate = useNavigate(); // Initialize useNavigate
+
+    const handleClickLogin = () => {
+        navigate('/login'); // Navigate to the login page
+    }
+
+    const handleClickSignup = () => {
+        navigate('/signup'); // Navigate to the login page
+    }
+
     return(
     <nav>
         <div className="navbar">
@@ -14,8 +26,8 @@ const Header = () => {
                 <li className="contact"><a href="#contact">Contact Us</a></li>
             </ul>
             <div className="nav-btns">
-                <button className="btn-login" onClick={window.location.href = '/login'}>Login</button>
-                <button className="btn-signup" onClick={() => window.location.href = '/signup'}>Sign Up</button>
+                <button className="btn-login" onClick={handleClickLogin}>Login</button>
+                <button className="btn-signup" onClick={handleClickSignup}>Sign Up</button>
             </div>
         </div>
     </nav>

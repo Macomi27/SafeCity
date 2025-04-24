@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import './SignupModal.css'
 import { FaCheck } from "react-icons/fa";
+import { FaShareNodes } from "react-icons/fa6";
 import { FaTimes } from 'react-icons/fa'; // Importing the close icon from react-icons
 
 const SignupModal = ({ onClose }) => {
@@ -31,7 +32,7 @@ const SignupModal = ({ onClose }) => {
             <p>Welcome to SafeCity! You can now report local issues, track progress, and contribute to a safer community.</p> </div>
             <div className="confirmation-buttons">
                 <button className="continue" onClick={handleClickContinue}>Contine</button>
-                <button className="share" onClick={handleClickShare}>Share</button>
+                <button className="share" onClick={handleClickShare}>Share <FaShareNodes/></button>
             </div>
         </div> 
         </div>

@@ -11,8 +11,8 @@
 .signup-modal .signup-modal-close{
     width: 24px;
     position: absolute;
-    right: 31%;
-    top: 20%;
+    right: 32%;
+    top: 18%;
     cursor: pointer;
     z-index: 3;
 }
@@ -100,5 +100,25 @@
 .confirmation-buttons .share{
     background-color: #F8F9FA;
     border: 1px solid #757575;
-    color: #757575;
+    color: #4e4d4d;
+}
+
+@media (max-width:767px) {
+
+    .signup-modal .signup-modal-close{
+        top: 11%;
+        right: 15%;
+    }
+
+    .confirmation-container{
+        width: 80vw;
+    }
+
+    .confirmation-buttons{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .confirmation-buttons button{
+        width: 100%;
+    }
 }

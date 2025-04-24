@@ -1,5 +1,5 @@
 import "./Hero.css"
-import cityIllustration from "./assets/city-illustration.svg"
+
 
 const Hero = () => {
   return (
@@ -25,7 +25,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-image">
-          <img src={cityIllustration || "/placeholder.svg"} alt="City Illustration" />
+          
         </div>
       </div>
     </section>

@@ -26,7 +26,12 @@
   margin-bottom: 1.5rem;
   line-height: 1.1;
 }
-
+.highlight{
+  font-size: 2rem;
+  font-style: italic;
+  color: orange;
+  font-weight: 600;
+}
 .hero-text {
   font-size: 1.25rem;
   margin-bottom: 2rem;

@@ -1,0 +1,107 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .success-modal {
+    background-color: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+  }
+  
+  .modal-header {
+    background-color: #006400;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .modal-content {
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .success-icon {
+    font-size: 48px;
+    color: #006400;
+    background-color: #e6f7e6;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+  }
+  
+  .success-message {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .tracking-info {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .report-id {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #006400;
+  }
+  
+  .modal-actions {
+    display: flex;
+    padding: 20px;
+    border-top: 1px solid #eaeaea;
+  }
+  
+  .primary-button {
+    flex: 1;
+    background-color: #006400;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .secondary-button {
+    flex: 1;
+    background-color: white;
+    color: #006400;
+    border: 1px solid #006400;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .primary-button:hover {
+    background-color: #005200;
+  }
+  
+  .secondary-button:hover {
+    background-color: #f0f0f0;
+  }
+  

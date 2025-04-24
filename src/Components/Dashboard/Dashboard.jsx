@@ -124,7 +124,7 @@ const Dashboard = () => {
       </div>
 
       <div className="nav-links">
-        <div className="nav-link-item">
+        <div className="dashboard-nav-link-item">
           <i className="bi bi-award"></i>
           <span>My Badges</span>
         </div>

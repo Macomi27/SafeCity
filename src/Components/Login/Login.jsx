@@ -8,7 +8,7 @@ import passwordIcon from '../Signup/image/password.png'
 import emailIcon from '../Signup/image/email.png'
 import visibilityIcon from '../Signup/image/visibility.png'
 import visibilityOffIcon from '../Signup/image/visibility-off.png'
-import closeIcon from '../Signup/image/x.png'
+import { FaTimes } from "react-icons/fa";
 
 const Login = () => {
         const navigate = useNavigate(); // Initialize useNavigate
@@ -23,15 +23,15 @@ const Login = () => {
                     navigate('/'); // Redirect to the home page when the close icon is clicked  
                 }; 
 
+        const handleLogin = (e) => {
+            navigate('/dashboard'); // Navigate to the dashboard page
+        }
+
     return(
         <div className="login-page">
-            <div className="close-icon">
-                    <img  
-                            src={closeIcon} // Replace with the path to your close icon or you can use <FaTimes />  
-                            alt="Close"  
-                            onClick={handleCloseClick}  
-                        />
-                    </div>
+            <div className="login-close">
+                <FaTimes onClick={handleCloseClick}/>
+            </div>
         <div className="circle-design"></div>
         <div className="rect-design"></div>
         <div className="login-container">
@@ -70,7 +70,7 @@ const Login = () => {
                                 <img className="visibility" src={visibilityIcon} alt="" />
                                 }
                                     <input type="password" name="password" id="password" placeholder="Password" required/></div>
-                                 <div className="right-login-btn"><button>Login</button></div>
+                                 <div className="right-login-btn"><button onClick={handleLogin}>Login</button></div>
                             </form>
                            
                         </div>

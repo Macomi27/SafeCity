@@ -1,12 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+
 .signup-page{
     width: 100%;
     background-color: #F6F1ED;
     position: relative;
     z-index: 1;
     overflow: hidden;
+}
+
+.signup-page .sign-up-close{
+    width: 24px;
+    position: absolute;
+    right: 10%;
+    top: 16%;
+    cursor: pointer;
+}
+
+.signup-page .sign-up-close FaTimes{
+    width: 100%;
+    opacity: .5;
 }
 
 .rect-design{
@@ -47,7 +61,7 @@
     width: 40%;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
@@ -80,7 +94,7 @@
 .signup-intro-text-heading{
     font-weight: 800;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 32px;
     margin-bottom: 15px;
     color: #F6F1ED;
 }
@@ -90,7 +104,7 @@
     margin-inline: auto;
     font-weight: 600;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 28px;
     color: #F6F1ED;
     text-transform: capitalize;
 }
@@ -98,24 +112,9 @@
 .left-signup-summ{
     font-weight: 400;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 26px;
 }
 
-.left-signup-btn button{
-    width: 180px;
-    padding: 12px 15px;
-    border-radius: 10px;
-    border-width: 2px;
-    border: 2px solid #034E03;
-    background-color: #F6F1ED;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 100%;
-    cursor: pointer;
-    color: #006837;
-    text-transform: capitalize;
-    font-family: Inter;
-}
 
 .right-signup{
     width: 60%;
@@ -159,7 +158,7 @@
 .signup-form-header{
     font-weight: 700;
     font-size: 24px;
-    line-height: 100%;
+    line-height: 36px;
     color: #FF6F00;
     text-transform: capitalize;
     text-align: center;
@@ -177,6 +176,7 @@
     position: relative;  
 }
 
+
 .form-input input{
     padding: 15px 0;
     border-radius: 8px;
@@ -186,15 +186,43 @@
     padding-left: 70px;
 }
 
-.input-icon {  
+.form-input input:focus{
+    outline: none;
+}
+
+.form-input .error{
+    color: red;
+    font-size: 14px;
+    position: absolute;  
+    top: 100%;  
+    transform: translateY(-50%); 
+}
+.form-input .signup-successful{
+    color: green;
+    font-size: 14px;
+}
+
+.form-input .input-icon {  
+    width: 24px;
+    left: 20px;
     position: absolute;  
     top: 50%;  
-    transform: translateY(-50%);  
-    width: 80px;      
+    opacity: .5;
+    transform: translateY(-50%);   
 }  
- .visibility{
+ .visibility-off{
     position: absolute;  
     top: 50%;  
+    opacity: .5;
+    transform: translateY(-50%);  
+    right: 20px;  
+    width: 24px;
+}
+.visibility{
+    position: absolute;  
+    top: 50%;  
+    cursor: pointer;
+    opacity: .5;
     transform: translateY(-50%);  
     right: 20px;  
     width: 30px;
@@ -202,6 +230,7 @@
 
 .right-signup-btn{
     width: 70%;
+    margin-inline: auto;
 }
 .right-signup-btn button{
     font-family: Poppins;
@@ -215,9 +244,13 @@
     line-height: 100%;
     color: #ffffff;
     text-transform: capitalize;
-    margin-inline: auto;
     cursor: pointer;
 }
+
+/* .right-signup-btn button:hover{
+    border: 4px solid #F5FFF5;
+    transition: all .2s ease-in;
+} */
 
 .signup-option2{
     display: flex;
@@ -254,4 +287,57 @@
     font-size: 16px;
     line-height: 100%;
     color: #004D00;
+}
+
+
+@media (max-width:767px) {
+
+    .signup-page .sign-up-close{
+        right: 12%;
+        top: 10%;
+        color: #ffffff;
+    }
+
+    .signup-page .rect-design{
+        background-color: #FF6F00;
+        right: -25%;
+    }
+
+    .signup-page .circle-design{
+        background-color: #004D00;
+    }
+
+    .signup-container{
+        width: 85%;
+        flex-direction: column;
+    }
+
+    .left-signup, .right-signup{
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .signup-intro{
+        width: 80%;
+        gap: 30px;
+    }
+
+    .signup-intro-text-heading{
+        font-size: 18px;
+    }
+    
+    .signup-slogan{
+        font-size: 16px;
+    }
+    .left-signup-summ{
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .right-signup-form{
+        width: 90%;
+    }
+    .signup-form-header{
+        font-size: 20px;
+    }
 }

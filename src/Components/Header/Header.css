@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 
-nav{
+.header-nav{
     width: 100%;
     font-family: Poppins;
     background-color: #ffffff;
-    height: 100px;
 }
 
 .navbar{
@@ -18,7 +17,7 @@ nav{
 }
 
 .home-logo{
-    width: 81px;
+    width: 100px;
 }
 .home-logo img{
     width: 100%;
@@ -74,4 +73,31 @@ nav{
     font-size: Medium;
     line-height: 100%;
     border: 1px solid #2C2C2C;
+}
+
+
+@media (max-width:767px) {
+    .home-logo{
+        width: 80px;
+    }
+
+    .nav-links{
+        display: none;
+    }
+
+    .nav-btns{
+        width: 200px;
+    }
+    .nav-btns button{
+        width: 95px;
+        padding: 8px 0;
+    }
+    
+    .btn-login{
+        font-size: small;
+    }
+    
+    .btn-signup{
+        font-size: small;
+    }
 }

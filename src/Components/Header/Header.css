@@ -31,6 +31,7 @@
     list-style: none;
     align-items: center;
 }
+
 .nav-links a{
     text-decoration: none;
     font-size: 16px;
@@ -78,18 +79,18 @@
 
 
 @media (max-width:767px) {
-    .home-logo{
+    .header-nav .home-logo{
         width: 80px;
     }
 
-    .nav-links{
+    .header-nav .nav-links{
         display: none;
     }
 
-    .nav-btns{
+    .header-nav .nav-btns{
         width: 200px;
     }
-    .nav-btns button{
+    .header-nav .nav-btns button{
         width: 95px;
         padding: 8px 0;
     }

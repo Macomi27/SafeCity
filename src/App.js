@@ -3,6 +3,7 @@ import Header from "./Components/Header/Header.jsx";
 import React from "react";
 import UserProfile from "./Pages/UserProfile/UserProfile.jsx";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import Dashboard from './Components/Dashboard/Dashboard.jsx'
 import SignupPage from "./Pages/SignUp.jsx";
 import LoginPage from "./Pages/Login.jsx";
 import SignupModal from "./Components/Modal/SignupModal.jsx";
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/submitreport" element={<SubmitReport />} />
           <Route path="/userprofile" element={<UserProfile />} />
+          <Route path='/dashboard' element={<Dashboard/>} />
           <Route path="signupconfirmation" element={<SignupModal />} />
         </Routes>
       </Router>

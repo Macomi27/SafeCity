@@ -5,16 +5,17 @@
     width: 100%;
     font-family: Poppins;
     background-color: #ffffff;
-}
-
-.navbar{
-    width: 90%;
-    margin-inline: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-block: 16px;
+    padding-inline: 50px;
 }
+
+/* .navbar{
+    width: 90%;
+    margin-inline: auto;
+} */
 
 .home-logo{
     width: 100px;

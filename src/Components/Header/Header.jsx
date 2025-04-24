@@ -17,7 +17,7 @@ const Header = () => {
 
     return(
     <nav className="header-nav">
-        <div className="navbar">
+        {/* <div className="navbar"> */}
             <div className="home-logo"><img src={logoLarge} alt="" /></div>
             <ul className="nav-links">
                 <li className="home"><a href="#home">Home</a></li>
@@ -29,7 +29,7 @@ const Header = () => {
                 <button className="btn-login" onClick={handleClickLogin}>Login</button>
                 <button className="btn-signup" onClick={handleClickSignup}>Sign Up</button>
             </div>
-        </div>
+        {/* </div> */}
     </nav>
     )
 }

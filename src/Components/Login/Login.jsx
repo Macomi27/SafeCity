@@ -23,6 +23,10 @@ const Login = () => {
                     navigate('/'); // Redirect to the home page when the close icon is clicked  
                 }; 
 
+        const handleLogin = (e) => {
+            navigate('/dashboard'); // Navigate to the dashboard page
+        }
+
     return(
         <div className="login-page">
             <div className="login-close">
@@ -66,7 +70,7 @@ const Login = () => {
                                 <img className="visibility" src={visibilityIcon} alt="" />
                                 }
                                     <input type="password" name="password" id="password" placeholder="Password" required/></div>
-                                 <div className="right-login-btn"><button>Login</button></div>
+                                 <div className="right-login-btn"><button onClick={handleLogin}>Login</button></div>
                             </form>
                            
                         </div>

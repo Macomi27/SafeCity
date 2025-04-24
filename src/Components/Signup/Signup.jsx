@@ -64,7 +64,7 @@ const Signup = () => {
                 setSuccessMessage('Signup successful!'); // Update success message  
                 // Here, you would typically handle the signup (e.g., API call)  
                 console.log('Form submitted:', { username, email, password }); 
-                navigate('/login'); // Redirect to the login page after successful signup
+                navigate('/signupconfirmation'); // Redirect to the login page after successful signup
             }   
         }; 
 

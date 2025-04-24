@@ -6,6 +6,7 @@ import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import Dashboard from './Components/Dashboard/Dashboard.jsx'
 import SignupPage from "./Pages/SignUp.jsx";
 import LoginPage from "./Pages/Login.jsx";
+import SignupModal from "./Components/Modal/SignupModal.jsx";
 
 import "./App.css";
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/submitreport" element={<SubmitReport />} />
           <Route path="/userprofile" element={<UserProfile />} />
           <Route path='/dashboard' element={<Dashboard/>} />
+          <Route path="signupconfirmation" element={<SignupModal />} />
         </Routes>
       </Router>
     </div>

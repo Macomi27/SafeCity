@@ -1,0 +1,116 @@
+.report-steps {
+  padding: 100px 0;
+  background-color: #f9f9f9;
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.report-title {
+  font-size: 2.5rem;
+  color: #333;
+  max-width: 500px;
+}
+
+.report-cta {
+  max-width: 400px;
+}
+
+.report-cta p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.report-step-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.report-step-card:hover {
+  transform: translateY(-5px);
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.location-icon {
+  background-color: rgba(0, 100, 0, 0.1);
+  color: #006400;
+}
+
+.category-icon {
+  background-color: rgba(0, 51, 102, 0.1);
+  color: #003366;
+}
+
+.upload-icon {
+  background-color: rgba(0, 150, 0, 0.1);
+  color: #009600;
+}
+
+.map-pin-icon::before {
+  content: "📍";
+}
+
+.grid-icon::before {
+  content: "⊞";
+}
+
+.upload-icon::before {
+  content: "⬆️";
+}
+
+.step-card-title {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.step-card-text {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 992px) {
+  .report-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .report-cta {
+    margin-top: 30px;
+  }
+
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}

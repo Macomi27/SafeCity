@@ -75,7 +75,7 @@ const Signup = () => {
     return(
         <div className="signup-page">
         <div className="sign-up-close">
-        <FaTimes />
+        <FaTimes onClick={handleCloseClick}/>
         </div>
         <div className="circle-design"></div>
         <div className="rect-design"></div>

@@ -26,7 +26,7 @@ const Login = () => {
     return(
         <div className="login-page">
             <div className="login-close">
-                <FaTimes />
+                <FaTimes onClick={handleCloseClick}/>
             </div>
         <div className="circle-design"></div>
         <div className="rect-design"></div>

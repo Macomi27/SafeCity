@@ -67,7 +67,7 @@ letter-spacing: 0%;
     gap: 24px;
   }
   
-  .nav-link-item {
+  .dashboard-nav-link-item {
     display: flex;
     align-items: center;
     gap: 2px;
@@ -77,11 +77,11 @@ height: 24px;
 
   }
   
-  .nav-link-item i {
+  .dashboard-nav-link-item i {
     font-size: 24px;
     color:#006837;
   }
-  .nav-link-item span{
+  .dashboard-nav-link-item span{
     font-family: 'Poppins';
     font-weight: 500;
     font-size: 14px;

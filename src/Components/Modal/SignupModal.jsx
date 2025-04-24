@@ -7,7 +7,7 @@ import { FaTimes } from 'react-icons/fa'; // Importing the close icon from react
 const SignupModal = ({ onClose }) => {
     const navigate = useNavigate(); // Initialize useNavigate
     const handleClickContinue = () => {
-        navigate('/'); // Navigate to the home page
+        navigate('/dashboard'); // Navigate to the home page
     }
     const handleClickShare = () => {
         // Logic to share the app (e.g., open a share dialog)

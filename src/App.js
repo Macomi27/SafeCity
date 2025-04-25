@@ -7,7 +7,6 @@ import Dashboard from "./Components/Dashboard/Dashboard.jsx";
 import SignupPage from "./Pages/SignUp.jsx";
 import LoginPage from "./Pages/Login.jsx";
 import SignupModal from "./Components/Modal/SignupModal.jsx";
-import ReportIssue from "./Pages/ReportIssue.jsx";
 
 import "./App.css";
 
@@ -24,7 +23,6 @@ function App() {
             <Route path="/userprofile" element={<UserProfile />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="signupconfirmation" element={<SignupModal />} />
-            <Route path="/reportissue" element={<ReportIssue />} />
           </Routes>
         </Router>
       }

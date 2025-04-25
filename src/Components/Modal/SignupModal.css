@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.signup-modal{
+    background-image: linear-gradient(to bottom, hsla(152, 82%, 39%, 0.599), hsla(152, 82%, 39%, 0.599),
+    url("../Signup/Signup.jsx"));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.signup-modal .signup-modal-close{
+    width: 24px;
+    position: absolute;
+    right: 32%;
+    top: 18%;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.signup-modal .signup-modal-close FaTimes{
+    width: 100%;
+    opacity: .5;
+}
+
+.confirmation-container{
+    width: 40vw;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    font-family: Inter;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.confirmation-icon{
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    text-align: center;
+    box-shadow: 0px 2px 20px #98f6ca;
+    border-radius: 50%;
+    border: 1px solid #046236;
+    background-color: #d9f9ea;
+    color: #046236;
+}
+
+.confirmation-texts h2{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 40px;
+    color: #000000;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.confirmation-texts p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 33px;
+    color: #585858;
+    text-align: center;
+}
+
+
+.confirmation-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.confirmation-buttons button{
+    width: 45%;
+    padding: 15px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    text-transform: capitalize;
+}
+.confirmation-buttons .continue{
+    background-color: #12B76A;
+    border: none;
+    color: #ffffff;
+}
+.confirmation-buttons .share{
+    background-color: #F8F9FA;
+    border: 1px solid #757575;
+    color: #4e4d4d;
+}
+
+@media (max-width:767px) {
+
+    .signup-modal .signup-modal-close{
+        top: 11%;
+        right: 15%;
+    }
+
+    .confirmation-container{
+        width: 80vw;
+    }
+
+    .confirmation-buttons{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .confirmation-buttons button{
+        width: 100%;
+    }
+}

@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.about-us {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-header {
+  text-align: left;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-title {
+  width: 40%;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58px;
+  color: #111111;
+}
+
+.about-description {
+  width: 60%;
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #585858;
+}
+
+.about-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.mission-card {
+  background-color: rgba(0, 100, 0, 0.05);
+  width: 40%;
+}
+
+.vision-card {
+  background-color: rgba(0, 51, 102, 0.05);
+  width: 60%;
+  margin-left: 30px;
+
+}
+
+.values-card {
+  background-color: rgba(255, 107, 0, 0.05);
+}
+
+.icon-green {
+  color: #006400;
+  font-size: 48px;
+}
+
+.icon-blue {
+  color: #003366;
+  font-size: 48px;
+}
+
+.icon-orange {
+  color: #ff6b00;
+  font-size: 48px;
+}
+
+
+.card-title {
+  font-size:32px;
+  margin: 15px 0;
+  color: #111111;
+  font-weight: 600;
+  line-height: 42px;
+}
+
+.card-text {
+  color: #585858;
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.item-border{
+  border-right: 1px solid #E3E3E3;
+}
+
+.value-title {
+  font-size: 20px;
+  margin: 15px 0;
+  color: #111111;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.value-text {
+  color: #585858;
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 400
+}
+
+@media (max-width: 992px) {
+  .about-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-description {
+    margin-top: 15px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .values-card {
+    grid-column: span 1;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.how-it-works {
+  padding: 100px 0;
+  background-color: white;
+  font-family: Poppins, sans-serif;
+}
+
+.section-title {
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #111111;
+}
+.section-subtitle{
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #585858;
+}
+
+.steps-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 60px;
+}
+
+.steps-content {
+  flex: 1;
+}
+
+.steps-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.app-preview {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.app-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.step {
+  display: flex;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+.step-number {
+  font-size: 4rem;
+  font-weight: 200;
+  color: #e0e0e0;
+  line-height: 1;
+  margin-right: 20px;
+  min-width: 80px;
+}
+
+.step-info {
+  flex: 1;
+}
+
+.step-title {
+  font-size: 32px;
+  line-height: 42px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #006837;
+}
+
+.step-text {
+  color: #585858;
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@media (max-width: 992px) {
+  .steps-container {
+    flex-direction: column;
+  }
+
+  .steps-image {
+    order: -1;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .step {
+    flex-direction: column;
+  }
+
+  .step-number {
+    margin-bottom: 10px;
+  }
+}

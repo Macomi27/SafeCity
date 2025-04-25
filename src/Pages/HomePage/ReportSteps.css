@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+.report-steps {
+  padding: 100px 0;
+  background-color: #f9f9f9;
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.report-title {
+  font-size: 48px;
+  font-weight: 600;
+  color: #111111;
+  width: 50%;
+  line-height: 58px;
+}
+
+.report-cta {
+  width: 50%;
+  font-size: 20px;
+  color: #585858;
+  font-weight: 400;
+  line-height: 30px;
+  padding-left: 20px;
+}
+
+.report-cta a {
+  font-size: 20px;
+  color: #006837;
+  font-weight: 400;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.report-step-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+.anonymous a{
+  color: #FF6F00;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  font-weight: Inter;
+  text-decoration: none;
+}
+
+.report-step-card:hover {
+  transform: translateY(-5px);
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+
+.upload-icon{
+  background-color: rgba(0, 150, 0, 0.1);
+  color: #009600;
+  margin-inline: auto;
+}
+
+.upload-icon-eyeslash {
+  background-color: rgba(255, 237, 226, 0.897);
+  color: #FF6F00;
+  margin-inline: auto;
+}
+
+.step-card-title {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #111111;
+}
+
+.step-card-text {
+  color: #585858;
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 992px) {
+  .report-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .report-cta {
+    margin-top: 30px;
+  }
+
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}

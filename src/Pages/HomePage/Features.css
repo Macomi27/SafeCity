@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+.features {
+  padding: 80px 0;
+  width: 100%;
+  font-family: Poppins, sans-serif;
+}
+
+.features-header{
+  text-align: center;
+  margin-bottom: 50px;
+  width: 50%;
+  margin-inline: auto;
+}
+.features-header h1 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58px;
+  color: #111111;
+}
+.features-header p {
+  font-size: 20px;
+  line-height: 30px;
+  color: #585858;
+  font-weight: 400;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.feature-card {
+  width: 100%;
+  background-color: white;
+  padding: 70px 30px 200px 30px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  min-height: 200px;
+  z-index: 1;
+}
+  .green-card{
+    border: 1px solid #006837;
+  }
+  .blue-card{
+    border: 1px solid #00347A;
+  }
+  .orange-card{
+    border: 1px solid #FF8C33;
+  }
+
+/* .green-card:hover{
+  background-color: #006837;
+  color: #ffffff;
+  animation: moveDiagonally 3s linear forwards;
+} */
+
+/* @keyframes moveDiagonally {  
+  0% {  
+      transform: translate(0, 0);  
+  }  
+  100% {  
+      transform: translateY(50px, 100px);  
+  }  
+} */
+
+.feature-title {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #111111;
+  font-weight: 500;
+  line-height: 50px;
+}
+
+.feature-text {
+  color: #585858;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+
+.green-shape {
+  background-color: #006837;
+  position: absolute;
+  bottom: -5%;
+  left: -10%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  z-index: -1;
+}
+/* .green-shape:hover{
+  background-color: #006837;
+  color: #ffffff;
+  transition: background-color 0.3s ease-in-out;
+} */
+
+.blue-shape {
+  background-color: #00347A;
+  position: absolute;
+  bottom: -10%;
+  left: 35%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.orange-shape {
+  background-color: #FF8C33;
+  position: absolute;
+  bottom: -5%;
+  right: -10%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+@media (max-width: 992px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}

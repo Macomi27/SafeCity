@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState} from "react";
+import { useNavigate } from "react-router-dom";
 import "./login.css"
 import loginLogo from '../Signup/image/LogoSignup.png'
 import fbLogo from '../Signup/image/fbLogo.png'
@@ -6,10 +7,31 @@ import googleLogo from '../Signup/image/googleLogo.png'
 import passwordIcon from '../Signup/image/password.png'
 import emailIcon from '../Signup/image/email.png'
 import visibilityIcon from '../Signup/image/visibility.png'
+import visibilityOffIcon from '../Signup/image/visibility-off.png'
+import { FaTimes } from "react-icons/fa";
 
 const Login = () => {
+        const navigate = useNavigate(); // Initialize useNavigate
+
+        const [showPassword, setShowPassword] = useState(false); // State to manage password visibility  
+            
+                const togglePasswordVisibility = () => {  
+                    setShowPassword((prev) => !prev); // Toggle password visibility  
+                }; 
+
+                const handleCloseClick = () => {  
+                    navigate('/'); // Redirect to the home page when the close icon is clicked  
+                }; 
+
+        const handleLogin = (e) => {
+            navigate('/dashboard'); // Navigate to the dashboard page
+        }
+
     return(
         <div className="login-page">
+            <div className="login-close">
+                <FaTimes onClick={handleCloseClick}/>
+            </div>
         <div className="circle-design"></div>
         <div className="rect-design"></div>
         <div className="login-container">
@@ -26,7 +48,7 @@ const Login = () => {
                         
                         <p className="left-login-summ">SafeCity lets you quickly report problems like potholes or broken streetlights—right when you spot them</p>
                     </div>
-                    <div className="left-login-btn"><button>sign in</button></div>
+                    
                 </div>
             </div>
 
@@ -40,14 +62,17 @@ const Login = () => {
                                 </div>
                                 <div className="form-input">
                                     <img className="input-icon" src={emailIcon} alt="" />
-                                    <input type="text" name="username" id="username" placeholder="Email/Phone Number" required/></div>
-                                <div className="form-input">
+                                    <input type="email" name="email" id="email" placeholder="Email/Phone Number"  required/></div>
+                                <div className="form-input" onClick={togglePasswordVisibility}>
                                     <img className="input-icon" src={passwordIcon} alt="" />
-                                    <img className="input-icon visibility" src={visibilityIcon} alt="" />
-                                    <input type="text" name="username" id="username" placeholder="Create Password" required/></div>
-                                
+                                    {showPassword ? 
+                                <img className="visibility-off" src={visibilityOffIcon} alt="" />: 
+                                <img className="visibility" src={visibilityIcon} alt="" />
+                                }
+                                    <input type="password" name="password" id="password" placeholder="Password" required/></div>
+                                 <div className="right-login-btn"><button onClick={handleLogin}>Login</button></div>
                             </form>
-                            <div className="right-login-btn"><button>Login</button></div>
+                           
                         </div>
                           <div className="forgot-password"><a href="/">forgot password?</a></div>  
                         <div className="login-option2">

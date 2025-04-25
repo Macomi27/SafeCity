@@ -6,7 +6,7 @@ import { AlertCircle } from 'react-feather';
 export default function Anonymous() {
   return (
     <div className="anonymous-dashboard">
-
+ 
       {/* Header */}
       <header className="header">
         <div className="logo">SafeCity</div>

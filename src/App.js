@@ -24,7 +24,7 @@ function App() {
             <Route path="/userprofile" element={<UserProfile />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="signupconfirmation" element={<SignupModal />} />
-            <Route path="/" element={<ReportIssue />} />
+            <Route path="/reportissue" element={<ReportIssue />} />
           </Routes>
         </Router>
       }

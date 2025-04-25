@@ -10,7 +10,7 @@ import { FaEyeSlash } from "react-icons/fa";
 
 const ReportSteps = () => {
   return (
-    <section className="report-steps section" id="report">
+    <section className="report-steps section" id="makeareport">
       <div className="container">
         <div className="report-header">
           <h2 className="report-title">How to Make a Report on SafeCity</h2>

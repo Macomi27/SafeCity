@@ -5,7 +5,7 @@ import previewImage from './assets/Image.png'
 
 const HowItWorks = () => {
   return (
-    <section className="how-it-works section" id="how-it-works">
+    <section className="how-it-works section" id="howitworks">
       <div className="container">
         <div className="section-header text-center">
           <h2 className="section-title">How SafeCity Works</h2>

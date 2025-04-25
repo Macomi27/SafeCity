@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from '../../Components/Header/Header'
-import Footer from "../../Components/Footer/Footer"
+import Footer from '../../Components/Footer/Footer'
 import AboutUs from './AboutUs'
-import CTA from './CTA'
+// import CTA from './CTA'
 import FAQ from './FAQ';
 import Features from './Features'
 import Hero from './Hero'
@@ -22,7 +22,7 @@ function Home() {
         {/* <ReportProcess />
         <WhyChoose /> */}
         <FAQ />
-        <CTA />
+        {/* <CTA /> */}
         <Footer />
       </div>
     )

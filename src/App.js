@@ -16,15 +16,10 @@ function App() {
       {
         <Router>
           <Routes>
-            <Route path="/ujnhj" element={<HomePage />} />
             <Route path="/" element={<HomePage />} />
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/login" element={<LoginPage />} />
-
             <Route path="/submitreport" element={<SubmitReport />} />
-
-            <Route path="/submitreport" element={<SubmitReport />} />
-
             <Route path="/userprofile" element={<UserProfile />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="signupconfirmation" element={<SignupModal />} />

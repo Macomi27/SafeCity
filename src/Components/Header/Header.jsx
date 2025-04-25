@@ -21,9 +21,9 @@ const Header = () => {
             <div className="home-logo"><img src={logoLarge} alt="" /></div>
             <ul className="landing-headernavlinks">
                 <li className="home"><a href="#home">Home</a></li>
-                <li className="how-it-works"><a href="#home">How It Works</a></li>
-                <li className="make-a-report"><a href="#home">Make a Report</a></li>
-                <li className="contact"><a href="#home">Contact Us</a></li>
+                <li className="how-it-works"><a href="#howitworks">How It Works</a></li>
+                <li className="make-a-report"><a href="#makeareport">Make a Report</a></li>
+                <li className="contact"><a href="#contactus">Contact Us</a></li>
             </ul>
             <div className="nav-btns">
                 <button className="btn-login" onClick={handleClickLogin}>Login</button>

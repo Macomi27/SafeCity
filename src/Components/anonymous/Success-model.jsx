@@ -1,7 +1,8 @@
-"use client"
+// "use client"
 import "./anonymous.css"
 import { useState } from "react"
 import SuccessModal from "./SuccessModal"
+import React from "react"
 
 export default function Anonymous() {
   const [showModal, setShowModal] = useState(false)

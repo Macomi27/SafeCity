@@ -1,6 +1,7 @@
-"use client"
+// "use client"
 import "./anonymous.css"
 import { AlertCircle } from 'react-feather';
+import React from "react";
 
 
 export default function Anonymous() {

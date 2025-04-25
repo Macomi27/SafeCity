@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 .report-steps {
   padding: 100px 0;
   background-color: #f9f9f9;
@@ -11,19 +13,28 @@
 }
 
 .report-title {
-  font-size: 2.5rem;
-  color: #333;
-  max-width: 500px;
+  font-size: 48px;
+  font-weight: 600;
+  color: #111111;
+  width: 50%;
+  line-height: 58px;
 }
 
 .report-cta {
-  max-width: 400px;
+  width: 50%;
+  font-size: 20px;
+  color: #585858;
+  font-weight: 400;
+  line-height: 30px;
+  padding-left: 20px;
 }
 
-.report-cta p {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 20px;
+.report-cta a {
+  font-size: 20px;
+  color: #006837;
+  font-weight: 400;
+  line-height: 30px;
+  text-decoration: none;
 }
 
 .steps-grid {
@@ -35,9 +46,18 @@
 .report-step-card {
   background-color: white;
   border-radius: 10px;
-  padding: 30px;
+  padding: 30px 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
+  text-align: center;
+}
+.anonymous a{
+  color: #FF6F00;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  font-weight: Inter;
+  text-decoration: none;
 }
 
 .report-step-card:hover {
@@ -55,42 +75,32 @@
   font-size: 24px;
 }
 
-.location-icon {
-  background-color: rgba(0, 100, 0, 0.1);
-  color: #006400;
-}
 
-.category-icon {
-  background-color: rgba(0, 51, 102, 0.1);
-  color: #003366;
-}
-
-.upload-icon {
+.upload-icon{
   background-color: rgba(0, 150, 0, 0.1);
   color: #009600;
+  margin-inline: auto;
 }
 
-.map-pin-icon::before {
-  content: "📍";
-}
-
-.grid-icon::before {
-  content: "⊞";
-}
-
-.upload-icon::before {
-  content: "⬆️";
+.upload-icon-eyeslash {
+  background-color: rgba(255, 237, 226, 0.897);
+  color: #FF6F00;
+  margin-inline: auto;
 }
 
 .step-card-title {
-  font-size: 1.25rem;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 500;
   margin-bottom: 15px;
-  color: #333;
+  color: #111111;
 }
 
 .step-card-text {
-  color: #666;
-  line-height: 1.6;
+  color: #585858;
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 400;
   margin-bottom: 15px;
 }
 

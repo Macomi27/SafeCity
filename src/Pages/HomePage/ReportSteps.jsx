@@ -1,4 +1,12 @@
 import "./ReportSteps.css"
+import React from "react";
+import { FaArrowRight, FaMapMarkerAlt } from "react-icons/fa";
+import { FaUpload } from "react-icons/fa";
+import { FaTh } from "react-icons/fa";
+import { FaMessage } from "react-icons/fa6";
+import { FaCheckCircle } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
+
 
 const ReportSteps = () => {
   return (
@@ -8,16 +16,16 @@ const ReportSteps = () => {
           <h2 className="report-title">How to Make a Report on SafeCity</h2>
           <div className="report-cta">
             <p>It only takes a few steps to make your voice heard.</p>
-            <a href="#report-form" className="btn btn-primary">
-              Click Here to Report an Issue <span className="arrow-icon">→</span>
+            <a href="#report-form">
+              Click Here to Report an Issue  <FaArrowRight/>
             </a>
           </div>
         </div>
 
         <div className="steps-grid">
           <div className="report-step-card">
-            <div className="step-icon location-icon">
-              <i className="map-pin-icon"></i>
+            <div className="step-icon upload-icon">
+              <FaMapMarkerAlt className="location-icon" />
             </div>
             <h3 className="step-card-title">Select your Location</h3>
             <p className="step-card-text">
@@ -26,8 +34,8 @@ const ReportSteps = () => {
           </div>
 
           <div className="report-step-card">
-            <div className="step-icon category-icon">
-              <i className="grid-icon"></i>
+            <div className="step-icon upload-icon">
+              <FaTh className="category-icon" />
             </div>
             <h3 className="step-card-title">Choose a Category</h3>
             <p className="step-card-text">
@@ -37,10 +45,37 @@ const ReportSteps = () => {
 
           <div className="report-step-card">
             <div className="step-icon upload-icon">
-              <i className="upload-icon"></i>
+              <FaUpload className="upload-icon" />
             </div>
             <h3 className="step-card-title">Upload an Image</h3>
             <p className="step-card-text">Include a picture to help authorities better understand the issue.</p>
+          </div>
+
+          <div className="report-step-card">
+            <div className="step-icon upload-icon">
+              <FaMessage className="message-icon" />
+            </div>
+            <h3 className="step-card-title">Describe the Issue</h3>
+            <p className="step-card-text">Tell us what is wrong and how it’s affecting the area.</p>
+          </div>
+
+          <div className="report-step-card">
+            <div className="step-icon upload-icon">
+              <FaCheckCircle className="checkcircle-icon" />
+            </div>
+            <h3 className="step-card-title">Review & Submit</h3>
+            <p className="step-card-text">Confirm your details and send the report - we’ll take it from there.</p>
+          </div>
+
+          <div className="report-step-card">
+            <div className="step-icon upload-icon-eyeslash">
+              <FaEyeSlash className="eyeslash-icon" />
+            </div>
+            <h3 className="step-card-title">Choose to Stay Anonymous</h3>
+            <p className="step-card-text">You can report anonymously without creating an account.</p>
+            <div className="anonymous">
+              <a href="anonymousreport">Report anonymously <FaArrowRight/></a>
+            </div>
           </div>
         </div>
       </div>

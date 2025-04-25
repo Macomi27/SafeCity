@@ -1,4 +1,7 @@
 import "./Hero.css"
+import React from 'react'
+import heroImage from './assets/Hero eection Image.png'
+import { FaArrowRight } from "react-icons/fa"
 
 
 const Hero = () => {
@@ -7,25 +10,19 @@ const Hero = () => {
       <div className="container hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
-            REPORT. TRACK.
-            <br />
-            TRANSFORM.
+            REPORT. TRACK. TRANSFORM.
           </h1>
           <p className="hero-text">
-            See a problem? With <span className="highlight">SafeCity</span>, report it in minutes, track real-time
+            See a problem? With <span className="span-highlight">SafeCity</span>, report it in minutes, track real-time
             progress, and help build a better city.
           </p>
           <div className="hero-buttons">
-            <a href="#report" className="btn btn-primary">
-              Report an Issue <span className="arrow-icon">→</span>
-            </a>
-            <a href="#demo" className="btn btn-outline hero-outline-btn">
-              View Demo
-            </a>
+            <button className="report-btn">Report an Issue <FaArrowRight/></button>
+            <button className="demo-btn">View Demo</button>
           </div>
         </div>
         <div className="hero-image">
-          
+          <img src={heroImage} alt="" />
         </div>
       </div>
     </section>

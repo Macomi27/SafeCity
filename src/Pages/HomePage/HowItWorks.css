@@ -1,6 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 .how-it-works {
   padding: 100px 0;
   background-color: white;
+  font-family: Poppins, sans-serif;
+}
+
+.section-title {
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #111111;
+}
+.section-subtitle{
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #585858;
 }
 
 .steps-container {
@@ -58,14 +76,18 @@
 }
 
 .step-title {
-  font-size: 1.5rem;
+  font-size: 32px;
+  line-height: 42px;
   margin-bottom: 10px;
-  color: #006400;
+  font-weight: 500;
+  color: #006837;
 }
 
 .step-text {
-  color: #666;
-  line-height: 1.6;
+  color: #585858;
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 @media (max-width: 992px) {

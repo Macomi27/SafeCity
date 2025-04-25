@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 .about-us {
   background-color: #f9f9f9;
   padding: 80px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .about-header {
@@ -12,110 +22,105 @@
 }
 
 .about-title {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 0;
+  width: 40%;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58px;
+  color: #111111;
 }
 
 .about-description {
-  font-size: 1.1rem;
-  color: #666;
-  max-width: 600px;
+  width: 60%;
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #585858;
 }
 
 .about-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .about-card {
   background-color: white;
   border-radius: 10px;
   padding: 30px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
 .mission-card {
   background-color: rgba(0, 100, 0, 0.05);
+  width: 40%;
 }
 
 .vision-card {
   background-color: rgba(0, 51, 102, 0.05);
+  width: 60%;
+  margin-left: 30px;
+
 }
 
 .values-card {
   background-color: rgba(255, 107, 0, 0.05);
-  grid-column: span 2;
-}
-
-.icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
 }
 
 .icon-green {
-  background-color: rgba(0, 100, 0, 0.1);
   color: #006400;
+  font-size: 48px;
 }
 
 .icon-blue {
-  background-color: rgba(0, 51, 102, 0.1);
   color: #003366;
+  font-size: 48px;
 }
 
 .icon-orange {
-  background-color: rgba(255, 107, 0, 0.1);
   color: #ff6b00;
+  font-size: 48px;
 }
 
-.target-icon::before {
-  content: "◎";
-  font-size: 24px;
-}
-
-.eye-icon::before {
-  content: "👁";
-  font-size: 24px;
-}
-
-.check-icon::before {
-  content: "✓";
-  font-size: 24px;
-}
 
 .card-title {
-  font-size: 1.5rem;
+  font-size:32px;
   margin: 15px 0;
-  color: #333;
+  color: #111111;
+  font-weight: 600;
+  line-height: 42px;
 }
 
 .card-text {
-  color: #666;
-  line-height: 1.6;
+  color: #585858;
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 15px;
 }
 
 .values-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 30px;
   margin-top: 20px;
 }
 
+.item-border{
+  border-right: 1px solid #E3E3E3;
+}
+
 .value-title {
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-  color: #333;
+  font-size: 20px;
+  margin: 15px 0;
+  color: #111111;
+  font-weight: 500;
+  line-height: 30px;
 }
 
 .value-text {
-  color: #666;
-  font-size: 0.9rem;
+  color: #585858;
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 400
 }
 
 @media (max-width: 992px) {

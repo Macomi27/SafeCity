@@ -1,62 +1,85 @@
 .hero {
+  width: 100%;
   background-color: #004D00;
   color: white;
-  padding: 150px 0 100px;
+  padding: 30px 50px;
   position: relative;
-  overflow: hidden;
 }
 
 .hero-container {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  position: relative;
-  z-index: 2;
-  margin: 20px
+  gap: 50px;
+  margin-block: 20px;
 }
 
 .hero-content {
-  flex: 1;
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 30px;
 }
 
 .hero-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  margin-bottom: 1.5rem;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 68px;
   line-height: 1.1;
 }
-.highlight{
-  font-size: 2rem;
-  font-style: italic;
-  color: orange;
-  font-weight: 600;
-}
 .hero-text {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
+  font-size: 32px;
+  line-height: 40px;
+  color: #F5F5F5;
+  margin-bottom: 30px;
+}
+.span-highlight{
+  font-size: 32px;
+  line-height: 40px;
+  font-style: italic;
+  color: #FF6F00;
+  font-weight: 700;
 }
 
 .hero-buttons {
+  width: 80%;
   display: flex;
-  gap: 15px;
+  justify-content: space-between;
 }
 
-.hero-outline-btn {
-  border-color: white;
-  color: white;
+.hero-buttons button{
+  width: 45%;
+  padding-block: 15px;
+  border-radius: 100px;
 }
+
+.hero-buttons .report-btn {
+  background-color: #ffffff;
+  color: #004D00;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-buttons .demo-btn {
+  background-color: #004D00;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
 
 .hero-outline-btn:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 .hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  max-width: 500px;
+  width: 50%;
 }
 
 .hero-image img {

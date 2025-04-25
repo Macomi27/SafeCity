@@ -1,4 +1,8 @@
 import "./AboutUs.css"
+import React from 'react'
+import { FaRegCheckCircle } from "react-icons/fa"
+import { FaEye } from "react-icons/fa"
+import { FaBullseye } from "react-icons/fa"
 
 const AboutUs = () => {
   return (
@@ -15,7 +19,7 @@ const AboutUs = () => {
         <div className="about-cards">
           <div className="about-card mission-card">
             <div className="icon icon-green">
-              <i className="target-icon"></i>
+              <FaBullseye className="target-icon" />
             </div>
             <h3 className="card-title">Mission Statement</h3>
             <p className="card-text">
@@ -26,7 +30,7 @@ const AboutUs = () => {
 
           <div className="about-card vision-card">
             <div className="icon icon-blue">
-              <i className="eye-icon"></i>
+              <FaEye className="eye-icon" />
             </div>
             <h3 className="card-title">Vision Statement</h3>
             <p className="card-text">
@@ -36,25 +40,26 @@ const AboutUs = () => {
               and improved urban living conditions.
             </p>
           </div>
+        </div>
 
-          <div className="about-card values-card">
+        <div className="about-card values-card">
             <div className="icon icon-orange">
-              <i className="check-icon"></i>
+              <FaRegCheckCircle className="check-icon" />
             </div>
             <h3 className="card-title">Core Values</h3>
 
             <div className="values-grid">
-              <div className="value-item">
+              <div className="value-item item-border">
                 <h4 className="value-title">Transparency</h4>
                 <p className="value-text">Real-time updates through interactive maps</p>
               </div>
 
-              <div className="value-item">
+              <div className="value-item item-border">
                 <h4 className="value-title">Accountability</h4>
                 <p className="value-text">Data-driven oversight to track municipal performance</p>
               </div>
 
-              <div className="value-item">
+              <div className="value-item item-border">
                 <h4 className="value-title">Community Engagement</h4>
                 <p className="value-text">Enabling residents to report local issues and provide feedback</p>
               </div>
@@ -65,7 +70,6 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-        </div>
       </div>
     </section>
   )

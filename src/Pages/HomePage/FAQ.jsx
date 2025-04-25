@@ -1,7 +1,9 @@
 "use client"
+import React from "react"
 
 import { useState } from "react"
 import "./FAQ.css"
+import { FaArrowRight, FaChevronDown, FaChevronUp } from "react-icons/fa"
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -47,10 +49,11 @@ const FAQ = () => {
             <p className="faq-subtitle">Have a question about SafeCity? Find answers here.</p>
             <p className="faq-contact">
               If your question isn't listed, feel free to reach out and we'll get back you shortly.
-              <a href="#contact" className="contact-link">
-                Contact Us <span className="arrow-icon">→</span>
-              </a>
+              
             </p>
+            <a href="#contact" >
+                Contact Us <FaArrowRight className="rightarrow"/>
+              </a>
           </div>
 
           <div className="accordion">
@@ -58,7 +61,7 @@ const FAQ = () => {
               <div key={index} className={`accordion-item ${activeIndex === index ? "active" : ""}`}>
                 <div className="accordion-header" onClick={() => toggleAccordion(index)}>
                   <h3 className="accordion-title">{item.question}</h3>
-                  <span className="accordion-icon">{activeIndex === index ? "▲" : "▼"}</span>
+                  <p className="accordion-icon">{activeIndex === index ? <FaChevronUp/> : <FaChevronDown/>}</p>
                 </div>
                 <div className={`accordion-content ${activeIndex === index ? "show" : ""}`}>
                   <p>{item.answer}</p>

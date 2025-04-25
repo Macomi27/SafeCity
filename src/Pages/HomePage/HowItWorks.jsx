@@ -1,5 +1,7 @@
 import "./HowItWorks.css"
-import appPreview from "./assets/app-preview.png"
+// import appPreview from "./assets/app-preview.png"
+import React from 'react'
+import previewImage from './assets/Image.png'
 
 const HowItWorks = () => {
   return (
@@ -55,7 +57,7 @@ const HowItWorks = () => {
 
           <div className="steps-image">
             <div className="app-preview">
-              <img src={appPreview || "/placeholder.svg"} alt="SafeCity App Preview" />
+              <img src={previewImage} alt="SafeCity App Preview" />
             </div>
           </div>
         </div>

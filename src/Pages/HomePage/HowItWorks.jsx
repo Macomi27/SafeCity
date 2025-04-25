@@ -8,8 +8,8 @@ const HowItWorks = () => {
     <section className="how-it-works section" id="howitworks">
       <div className="container">
         <div className="section-header text-center">
-          <h2 className="section-title">How SafeCity Works</h2>
-          <p className="section-subtitle">
+          <h2 className="section-how-title">How SafeCity Works</h2>
+          <p className="section-how-subtitle">
             Easily report infrastructure issues and track their resolution in real-time.
           </p>
         </div>

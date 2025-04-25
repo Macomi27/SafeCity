@@ -12,9 +12,9 @@ export default function Anonymous() {
         <div className="logo">SafeCity</div>
         <nav className="main-nav">
           <ul className="nav-list">
-            <li><a href="/about" className="nav-link">About</a></li>
-            <li><a href="/contact" className="nav-link">Contact</a></li>
-            <li><a href="/login" className="nav-link">Login</a></li>
+            <li><a href="#aboutus" className="nav-link">About</a></li>
+            <li><a href="#contact" className="nav-link">Contact</a></li>
+            <li><a href="#login" className="nav-link">Login</a></li>
           </ul>
         </nav>
       </header>

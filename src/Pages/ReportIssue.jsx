@@ -1,11 +1,13 @@
-// import React from "react";
-// import Anonymous from "../Components/anonymous/Success-model";
+import React from "react";
 
-// const ReportIssue = () => {
-//     return (
-//         <div>
-//         <Anonymous />
-//         </div>
-//     );
-// }
-// export default ReportIssue;
+import Anonymous from '../Components/anonymous/anonymous.jsx'
+
+
+const ReportIssue = () => {
+    return (
+        <div className="ReportIssue">
+        <Anonymous />
+        </div>
+    );
+    }
+export default ReportIssue;
